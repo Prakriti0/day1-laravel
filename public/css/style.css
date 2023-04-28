@@ -37,3 +37,8 @@ h1{
     border: 2px solid red;
     background:linear-gradient(to right,red, black);
 }
+.footer{
+    background-color:lightgray;
+    display: flex;
+    justify-content: center;
+}
