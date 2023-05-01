@@ -13,15 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+ Route::get('/', function () {
     return view('welcome');
 });
+
 // Route::get('/hello ', function () {
 //     return view('Layout/hello');
 // });
+
 route::view("/hello","/Layout/hello");
 
 Route::get('/getdata', function () {
     return $data = ['hello','apple','orange'];
 });
+Route::get('/hitdata', function () {
+    return $data = ['hello','I','am','Prakriti','Limbu'];
+});
+
 route::post('/savedata',[logic::class,'save']);
+
+// route::get('/',[Logic::class,'index']);
+
+route::get('/table',[logic::class,'index']);
+
+route::get('/edit/{id}',[logic::class,'edit']);
+
+route::post ('/update-data',[logic::class,'update']);
